@@ -12,7 +12,7 @@ public class BoidaBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(BoidaBackendApplication.class, args);
     }
-
+qweqw
     @GetMapping(path = "/api/hello/world")
     public String helloWorld() {
         return "Hello Best-House";
