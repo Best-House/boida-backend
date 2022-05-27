@@ -15,6 +15,6 @@ public class BoidaBackendApplication {
 
     @GetMapping(path = "/api/hello/world")
     public String helloWorld() {
-        return "Hello Best-House";
+        return "Hello jinyoung";
     }
 }
