@@ -1,0 +1,6 @@
+service:
+  message: "Hello World!"
+
+logging:
+  level:
+    web: debug

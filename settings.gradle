@@ -1,1 +1,4 @@
 rootProject.name = 'boida-backend'
+include 'core'
+include 'api'
+

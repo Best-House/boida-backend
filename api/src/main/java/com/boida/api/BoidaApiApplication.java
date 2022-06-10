@@ -1,20 +1,24 @@
-package com.boida.boidabackend;
+package com.boida.api;
 
+import com.boida.core.MyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.boida")
 @RestController
-public class BoidaBackendApplication {
+public class BoidaApiApplication {
+    @Autowired
+    private MyService myService;
+
     public static void main(String[] args) {
-        SpringApplication.run(BoidaBackendApplication.class, args);
+        SpringApplication.run(BoidaApiApplication.class, args);
     }
 
     @GetMapping(path = "/api/hello/world")
     public String helloWorld() {
-        return "Hello jinyoung";
+        return myService.message();
     }
 }
