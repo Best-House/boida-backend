@@ -1,6 +1,6 @@
 package com.boida.api;
 
-import com.boida.core.MyService;
+import com.boida.infra.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

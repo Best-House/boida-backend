@@ -1,22 +1,24 @@
 plugins {
-    id 'org.springframework.boot' version '2.6.3' // apply false
+    id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
+    id 'java-library'
 }
 
-group 'com.boida'
-version '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+group = 'com.boida.infra'
+version = '0.0.1-SNAPSHOT'
+
+bootJar.enabled = false
+jar.enabled = true
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
 
 repositories {
     mavenCentral()
 }
-
-//dependencyManagement {
-//    imports {
-//        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
-//    }
-//}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
@@ -24,6 +26,6 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 }
 
-test {
+tasks.named('test') {
     useJUnitPlatform()
 }
