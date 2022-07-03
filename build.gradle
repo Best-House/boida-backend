@@ -1,31 +1,58 @@
-plugins {
-    id 'org.springframework.boot' version '2.6.3'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
-}
-
-group = 'com.boida'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
-
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
-}
+//buildscript {
+//    ext {
+//        springBootVersion = '2.6.3'
+//    }
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//    }
+//}
+//
+//allprojects {
+//    plugins {
+//        id 'java-library'
+//    }
+//    sourceCompatibility = 11
+//    targetCompatibility = 11
+//    ext.profile = (!project.hasProperty('profile') || !profile) ? 'local' : profile
+//
+//    println "profile: $profile"
+//
+//    sourceSets {
+//        main {
+//            resources {
+//                srcDirs "src/main/java", "src/main/resources", "src/main/resources-${profile}"
+//            }
+//        }
+//    }
+//
+//    repositories {
+//        mavenCentral()
+//    }
+//
+//    test {
+//        useJUnitPlatform()
+//    }
+//}
+//
+//
+//subprojects {
+//    group 'com.boida'
+//    version '1.0.0-SNAPSHOT'
+//
+//    task allDeps(type: DependencyReportTask) {}
+//
+//    repositories {
+//        mavenCentral()
+//    }
+//
+//    dependencies {
+//        api ('org.projectlombok:lombok')
+//        annotationProcessor ('org.projectlombok:lombok')
+//        testImplementation ('org.springframework.boot:spring-boot-starter-test')
+//    }
+//
+//    apply plugins: 'org.springframework.boot'
+//}

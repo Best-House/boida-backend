@@ -1,4 +1,4 @@
-package com.boida.core;
+package com.boida.infra;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.boida.core;
+package com.boida.infra;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
